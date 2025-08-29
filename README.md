@@ -9,6 +9,19 @@ This repo provides CloudFormation templates for the LDAV DynamoDB workshop. Clou
 - Use `CloudShell-eu.yaml` if you want to enforce deployment in EU regions (will fail if run outside EU).
 - `C9-Original-Do-Not-Use.yaml` remains for reference only and should not be deployed.
 
+Get Workshop Code In CloudShell
+- Open AWS CloudShell in your target region.
+- Download and extract the workshop bundle into your CloudShell home directory:
+
+`mkdir -p ~/workshop && cd ~/workshop && curl -L -o workshop.zip https://amazon-dynamodb-labs.com/assets/workshop.zip && unzip -q workshop.zip`
+
+- Verify files are present:
+
+`ls -la ~/workshop`
+
+Notes:
+- In CloudShell you can omit `--profile` from the AWS CLI examples below because CloudShell already has credentials configured. If running locally, keep using `--profile chetz-playground`.
+
 Prerequisites
 - AWS CLI v2 configured with a profile that has permissions for CloudFormation, IAM, EC2, S3, Lambda, and SSM (Session Manager). Example profile: `chetz-playground`.
 - Choose your target region in the CLI config or via `--region`.
